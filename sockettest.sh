@@ -16,7 +16,7 @@ function printusage
 
 while getopts "t:p:" opt; do
 	case ${opt} in
-		h )
+		t )
 			target=$OPTARG
 			;;
 		p )
