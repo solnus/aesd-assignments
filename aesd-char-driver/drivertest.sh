@@ -30,10 +30,9 @@ echo "write9" > ${device}
 echo "write10" > ${device}
 
 echo "The output below should show writes 1-10 in order"
-
 read_file=`tempfile`
 cat ${device} > ${read_file}
-
+cat ${read_file}
 expected_file=`tempfile`
 cat >${expected_file}  << EOF
 write1
@@ -68,6 +67,7 @@ EOF
 
 cat ${device} > ${read_file}
 echo "The output should show writes 2-11 in order"
+cat ${read_file}
 check_output ${read_file} ${expected_file_2_to_11}
 
 echo -n "w" > ${device}
@@ -87,8 +87,8 @@ echo -n "it" > ${device}
 echo "e10" > ${device}
 
 echo "The output should show writes 1-10 in order, with write1 and write10 on a single line"
-
 cat ${device} > ${read_file}
+cat ${read_file}
 check_output ${read_file} ${expected_file}
 
 exit ${rc}
