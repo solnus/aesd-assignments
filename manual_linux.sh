@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 # Script outline to install and build kernel.
 # Author: Siddhant Jajoo.
 
@@ -63,9 +63,3 @@ echo -e "\nCOPYING WRITER EXECUTABLE, TESTER.SH AND FINDER.SH TO ${OUTDIR}/rootf
 #TODO: Call a script to perform this function here or place a logic inline
 #Creating Standalone initramfs.
 echo -e "\nCREATING STANDALONE INITRAMFS\n"
-
-
-#Booting the kernel.
-echo -e "\nBOOTING THE KERNEL\n"
-"${DIR}"/start_qemu_terminal.sh "$OUTDIR"
-
