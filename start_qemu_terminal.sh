@@ -3,7 +3,6 @@
 # Author: Siddhant Jajoo.
 
 set -e
-set -u
 
 OUTDIR=/tmp/ecen5013
 
