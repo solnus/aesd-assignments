@@ -7,8 +7,7 @@ target_link_libraries(unity-test unity)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror")
 # See https://cmake.org/cmake/help/latest/command/add_custom_command.html
 # Generate our test runner using the auto_generate.sh script
-add_custom_target(auto-generate-unity
-                   ALL
+add_custom_command(OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/test/test_runners/Test_circular_buffer_Runner.c
                    COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/test/auto_generate.sh
                 )
 set(CMAKE_BUILD_TYPE Debug)
