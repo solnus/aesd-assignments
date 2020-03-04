@@ -66,7 +66,7 @@ extern void aesd_circular_buffer_init(struct aesd_circular_buffer *buffer);
  * @param index is a uint8_t stack allocated value used by this macro for an index
  * Example usage:
  * uint8_t index;
- * struct aesd_buffer buffer;
+ * struct aesd_circular_buffer buffer;
  * struct aesd_buffer_entry *entry;
  * AESD_CIRCULAR_BUFFER_FOREACH(entry,&buffer,index) {
  * 		free(entry->buffptr);
