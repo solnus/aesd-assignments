@@ -6,3 +6,5 @@
 *.mod.c
 *.o
 linux_source_cdt
+*.mod
+build

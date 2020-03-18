@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 # Tester script for Multithreaded server with periodic timestamp using Netcat
 # Note: This script has to be executed only once after running the server
 # Author : Steve Kennedy
@@ -16,7 +16,7 @@ function printusage
 
 while getopts "t:p:" opt; do
 	case ${opt} in
-		h )
+		t )
 			target=$OPTARG
 			;;
 		p )

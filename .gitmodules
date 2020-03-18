@@ -1,0 +1,3 @@
+[submodule "aesd-char-driver/Unity"]
+	path = aesd-char-driver/Unity
+	url = https://github.com/ThrowTheSwitch/Unity.git
