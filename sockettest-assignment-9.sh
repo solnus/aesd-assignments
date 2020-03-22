@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 # Tester script for sockets using Netcat
 
 target=localhost
