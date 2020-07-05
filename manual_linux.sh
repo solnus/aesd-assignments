@@ -6,7 +6,7 @@ set -e
 set -u
 
 
-OUTDIR=/tmp/ecen5013
+OUTDIR=/tmp/aesd
 REPO=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git
 #DIR is the path where writer executable, finder.sh and tester.sh are stored.
 #Refer: https://www.electrictoolbox.com/bash-script-directory/

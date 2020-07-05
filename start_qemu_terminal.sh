@@ -4,7 +4,7 @@
 
 set -e
 
-OUTDIR=/tmp/ecen5013
+OUTDIR=/tmp/aesd
 
 if [ $# -lt 1 ]
 then
@@ -26,5 +26,4 @@ cd "$OUTDIR"
 
 #Booting the kernel
 echo -e "\nBOOTING THE KERNEL\n"
-echo QEMU_AUDIO_DRV=none qemu-system-arm -m 256M -nographic -M versatilepb -kernel zImage -append "console=ttyAMA0 rdinit=/bin/sh" -dtb versatile-pb.dtb -initrd initramfs.cpio.gz
 QEMU_AUDIO_DRV=none qemu-system-arm ${AESD_QEMU_EXTRA_ARGS} -m 256M -nographic -M versatilepb -kernel zImage -append "console=ttyAMA0 rdinit=/bin/sh" -dtb versatile-pb.dtb -initrd initramfs.cpio.gz
