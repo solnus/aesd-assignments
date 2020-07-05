@@ -13,6 +13,8 @@ if [ -f ./assignment-autotest/docker/options ]; then
     . ./assignment-autotest/docker/options
     parse_docker_options "$@"
 fi
+# Run unit tests
+./test-unit.sh
 
 # This part of the script always runs as the current user, even when
 # executed inside a docker container.
