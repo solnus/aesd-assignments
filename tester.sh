@@ -42,12 +42,12 @@ else
 	exit 1
 fi
 
-# ----------------------------------------------------
-# YOUR CODE BELOW: the example implementation only writes one file
-# You need to modify it to write the number of files passed as the NUMFILES parameter
 # And customize the written filename with numbers 1-10 as specified in the assignment
 
-#./writer.sh "$WRITEDIR/$USERNAME.txt" "$WRITESTR"
+for i in $(seq 1 $NUMFILES)
+do
+	./writer.sh "$WRITEDIR/$USERNAME$i.txt" "$WRITESTR"
+done
 
 # ----------------------------------------------------
 # End of your code modifications.
